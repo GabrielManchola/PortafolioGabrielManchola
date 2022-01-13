@@ -1,0 +1,50 @@
+﻿@model Persona
+
+@{
+    ViewData["Title"] = "Pagina principal";
+
+    string convertirEnMayusculas(string valor)
+    {
+        return valor.ToUpper();
+    }
+
+    DateTime hoy = DateTime.Now;
+
+    var nombres = new List<string>() { "Juanito", "Pepito", "Taradito" };
+}
+
+<div class="text-center">
+    <h4> Fecha: @hoy.ToString("dd/mm/yyy hh:mm:ss tt")</h4>
+    <h1 class="display-4">Soy @Model.Nombre  </h1>
+    <h2>Soy un desarrollador full stack especializado en desarrollo con .Net</h2>
+    <h2>Tengo @Model.Edad Años</h2>
+
+    <img src="~/imagenes/foto.jpg" alt="Foto de Gabriel" id="foto" />
+
+    <h3>Me gusta: @Model.Gustos </h3>
+    <h3>Ejemplo de mayusculas con C# @convertirEnMayusculas(Model.Nombre)</h3>
+
+    <h3>Ejemplo de if</h3>
+
+    @if(Model.Edad >= 18)
+    {
+        <h3>Soy Mayor de edad</h3>
+    }else{
+
+        <h3>Soy menor de edad :( </h3>    
+
+    }
+    <h3>Ejemplo de for en vista:</h3>
+
+    <ul>
+
+        @foreach(var nombre in nombres)
+        {
+            <li>@nombre</li>
+        }
+
+    </ul>
+
+    
+
+</div>

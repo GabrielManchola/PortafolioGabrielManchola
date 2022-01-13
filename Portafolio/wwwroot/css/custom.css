@@ -1,0 +1,7 @@
+﻿#foto {
+    width: 300px;
+    height: 300px;
+    margin: 2rem 0;
+    border-radius: 50%;
+    border: 2px solid black
+}
