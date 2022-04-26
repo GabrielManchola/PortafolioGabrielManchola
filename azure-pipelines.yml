@@ -18,10 +18,10 @@ variables:
 steps:
 
 - task: UseDotNet@2
-  displayName: 'Instalar .NET 5'
+  displayName: 'Instalar .NET 6'
   inputs:
     packageType: 'sdk'
-    version: '5.x'
+    version: '6.0.x'
 
 - task: NuGetToolInstaller@1
 
@@ -50,7 +50,7 @@ steps:
     projects: $(proyectoMVC)
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)/webapp --runtime win-x86 --self-contained'
     zipAfterPublish: false
-    modifyOutputPath: true
+    modifyOutputPath: false
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publicando los artefactos'
