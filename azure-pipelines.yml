@@ -50,7 +50,7 @@ steps:
     projects: $(proyectoMVC)
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)/webapp --runtime win-x86 --self-contained'
     zipAfterPublish: false
-    modifyOutputPath: false
+    modifyOutputPath: true
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publicando los artefactos'
