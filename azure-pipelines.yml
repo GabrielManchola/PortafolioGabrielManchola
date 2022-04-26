@@ -11,7 +11,7 @@ pool:
 
 variables:
   solution: '**/*.sln'
-  proyectoMVC: 'ManejoPresupuesto/ManejoPresupuesto.csproj'
+  proyectoMVC: '**/*.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -21,7 +21,7 @@ steps:
   displayName: 'Instalar .NET 6'
   inputs:
     packageType: 'sdk'
-    version: '5.x'
+    version: '6.1.x'
 
 - task: NuGetToolInstaller@1
 
