@@ -21,7 +21,7 @@ steps:
   displayName: 'Instalar .NET 6'
   inputs:
     packageType: 'sdk'
-    version: '5.0.x'
+    version: '5.x'
 
 - task: NuGetToolInstaller@1
 
